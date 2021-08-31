@@ -14,7 +14,7 @@ public class WordSearchController {
     @Autowired
     WordGridService wordGridService;
 
-    @GetMapping("/wordgrid")
+    @GetMapping("wordgrid")
     public String createWordGrid(@RequestParam int gridSize, @RequestParam String wordList) {
         List<String> words = Arrays.asList(wordList.split(","));
         char[][] grid = wordGridService.generateGrid(gridSize, words);
